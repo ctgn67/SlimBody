@@ -15,33 +15,20 @@ html, body {
     flex-direction: column;
 }
 
-/* Cabeçalho com degradê suave */
+/* Cabeçalho */
 header {
-    background: linear-gradient(135deg, #61c19e);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    background-color: #61c19e;
     color: white;
     padding: 25px 0;
     font-size: 1.8em;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 1px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
+/* Banner */
 .banner {
-    padding: 30px 0;
+    padding: 60px 0;
     position: relative;
     height: 40vh;
     display: flex;
@@ -65,7 +52,7 @@ header {
 }
 
 /* texto acima da camada de overlay */
-.banner h1, .banner p {
+.banner h1, .banner p, .banner a {
     position: relative;
     z-index: 2;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
@@ -84,7 +71,22 @@ header {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
 
-.content {
+.banner a{
+    margin-top: 20px;
+    color: white;
+    padding: 3px 6px;
+    font-weight: 700;
+    font-size: 1.2em;
+    transition: background 0.3s ease;
+}
+
+.banner a:hover{
+    color: #61c19e;
+}
+
+/* Mitolyn */
+
+section.mitolyn {
     background-color: #F9FAFB;
     padding: 60px 20px;
     flex: 1;
@@ -93,12 +95,12 @@ header {
     align-items: center;
 }
 
-.content h2 {
+section.mitolyn h1 {
     color: #3ca584;
     margin-bottom: 15px;
 }
 
-.content p {
+section.mitolyn p {
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
@@ -106,25 +108,107 @@ header {
     color: #666;
 }
 
-a.botao {
+section.mitolyn a.botao {
     margin-top: 35px;
     background: linear-gradient(135deg, #61c19e, #3ca584);
     color: white;
     padding: 14px 32px;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.1em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 300px;
 }
 
-a.botao:hover {
+section.mitolyn a.botao:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
+/* Produtos */
+section.produtos {
+    padding: 20px 0;
+    background-color: #F3F4F6;
+}
+
+section.produtos .apresentation {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+section.produtos .apresentation h2{
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #7bd0b1;
+}
+
+section.produtos .apresentation p{
+    margin-top: 2px;
+    color: #666;
+}
+
+section.produtos .grid-produtos{
+    max-width: 1152px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 32px;
+    padding: 0 24px;
+
+}
+
+section.produtos .grid-produtos .produto{
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transition-property: all;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+section.produtos .grid-produtos .produto:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+section.produtos .grid-produtos .produto img{
+    border-radius: 14px;
+    margin-bottom: 8px;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+section.produtos .grid-produtos .produto h3{
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #366e59;
+    margin-bottom: 2px;
+}
+
+section.produtos .grid-produtos .produto p{
+    color: #666;
+    margin-bottom: 4px;
+    flex: 1;
+}
+
+section.produtos .grid-produtos .produto a{
+    color: #61c19e;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+section.produtos .grid-produtos .produto a:hover{
+    text-decoration: underline;
+}
+
+/* Rodapé */
 footer {
+    background-color: #F3F4F6;
     padding: 20px;
     font-size: 0.9em;
     color: #666;
@@ -132,7 +216,7 @@ footer {
 }
 
 /*Telas Pequenas*/
-@media screen and (max-width: 768px){
+@media screen and (min-width: 640px){
     .banner h1 {
         font-size: 1.5em;
         max-width: 300px;
@@ -141,5 +225,15 @@ footer {
     .banner p {
         font-size: 1em;
         max-width: 300px;
+    }
+
+    section.produtos .grid-produtos{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    section.produtos .grid-produtos{
+        grid-template-columns: repeat(3, minmax(0, 1fr))
     }
 }
