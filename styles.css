@@ -72,7 +72,7 @@ header {
 }
 
 .banner a{
-    margin: 20px 0;
+    margin-top: 20px;
     color: white;
     padding: 3px 6px;
     font-weight: 700;
@@ -144,7 +144,6 @@ section.produtos .apresentation h2{
 }
 
 section.produtos .apresentation p{
-    padding: 20px;
     margin-top: 2px;
     color: #666;
 }
@@ -214,6 +213,42 @@ footer {
     font-size: 0.9em;
     color: #666;
     text-align: center;
+}
+
+
+
+/*   Página Thank-You   */
+
+.thankyou-box {
+    background: white;
+    border-radius: 15px;
+    padding: 40px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: auto;
+}
+.thankyou-box h1 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+.thankyou-box p {
+    font-size: 17px;
+    line-height: 1.5em;
+}
+.thankyou-box .redirect {
+    margin-top: 30px;
+}
+.thankyou-box .redirect a.button {
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+.thankyou-box .redirect a.button:hover {
+    background-color: #256628;
 }
 
 /*Telas Pequenas*/
