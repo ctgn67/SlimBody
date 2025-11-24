@@ -31,13 +31,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">     
 </head>
 
 <body>
 
     <!-- Cabeçalho -->
     <header>
-        SlimBody
+        <a href="/"><img src="assets/iconheader.png" alt="header"><span>SlimBody</span></a>
     </header>
 
     <!-- Banner -->
@@ -53,7 +59,13 @@
         <p>
         <a href="thank-you-mitolyn.html" style="text-decoration: none; color: #5e5d5d;"><strong>Mitolyn</strong></a> is one of our main products designed to enhance your daily energy and focus. It was developed to support your mitochondria — the powerhouses of your cells — helping you feel more energized and vibrant every day.
         </p>
-        <a href="thank-you-mitolyn.html" class="botao">Discover Mitolyn</a>
+        <div>
+            <span class="emoji-urgence">&#127881;</span>
+            <p>
+                <strong class="urgence">Don't put it off!</strong> <br> Limited stock for new customers — <strong>secure yours now!</strong>
+            </p>
+            <a href="thank-you-mitolyn.html" class="botao">Discover Mitolyn</a>
+        </div>
     </section>
 
     <!-- Seção de Produtos -->
@@ -92,6 +104,90 @@
         </div>
     </section>
 
+    <section class="depoimentos">
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <!-- Person 1 -->
+                    <li class="glide__slide">
+                        <div class="person">
+                            <div>
+                                <img src="assets/model1.svg" alt="">
+                                <p>Sarah Mitchell</p>
+                            </div>
+                        </div>
+                        <div class="opinion">
+                            <div>
+                                <p style="text-align: left;">❝</p>
+                                <p class="opinion-text">I've been using <b>Mitolyn</b> for three months now, and the difference in my energy levels is incredible! I feel more active throughout the day and I've already noticed positive changes in my metabolism. It's definitely worth trying!</p>
+                                <p style="text-align: right;">❞</p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Person 2 -->
+                    <li class="glide__slide">
+                        <div class="person">
+                            <div>
+                                <img src="assets/model2.svg" alt="">
+                                <p>James Cooper</p>
+                            </div>
+                        </div>
+                        <div class="opinion">
+                            <div>
+                                <p style="text-align: left;">❝</p>
+                                <p class="opinion-text"><b>ProstaVive</b> has been a game-changer for me. After just a few weeks, I noticed significant improvements in my urinary comfort and overall well-being. I wish I had discovered this supplement sooner!</p>
+                                <p style="text-align: right;">❞</p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Person 3 -->
+                    <li class="glide__slide">
+                        <div class="person">
+                            <div>
+                                <img src="assets/model3.svg" alt="">
+                                <p>Emily Rodriguez</p>
+                            </div>
+                        </div>
+                        <div class="opinion">
+                            <div>
+                                <p style="text-align: left;">❝</p>
+                                <p class="opinion-text">Since I started taking <b>ProDentim</b>, my gums feel healthier and my teeth are noticeably stronger. My dentist even commented on the improvement during my last checkup. I'm so impressed with the results!</p>
+                                <p style="text-align: right;">❞</p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Person 4 -->
+                    <li class="glide__slide">
+                        <div class="person">
+                            <div>
+                                <img src="assets/model4.svg" alt="">
+                                <p>Michael Thompson</p>
+                            </div>
+                        </div>
+                        <div class="opinion">
+                            <div>
+                                <p style="text-align: left;">❝</p>
+                                <p class="opinion-text"><b>Gluco6</b> has helped me maintain more stable blood sugar levels throughout the day. I have more consistent energy and I don't experience those afternoon crashes anymore. Highly recommend it to anyone looking for natural support!</p>
+                                <p style="text-align: right;">❞</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">◀</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">▶</button>
+            </div>
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+                <button class="glide__bullet" data-glide-dir="=3"></button>
+            </div>
+        </div>
+    </section>
+
     <!-- Rodapé -->
     <footer>
         <p>© 2025 SlimBody — Health and Wellness</p>
@@ -99,5 +195,7 @@
 
     <!-- JS -->
     <script src="js/animation-banner.js"></script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>
